@@ -1,6 +1,6 @@
 # AI Harness — Orchestration Layer Contracts
 
-Location: `ai_harness/interfaces/orchestration/`
+Location: `src/interfaces/orchestration/`
 
 **Responsibility:** Coordinate the full task lifecycle — initialize state, assemble context, manage workflow steps, invoke tools, persist state, and emit events. This is the main application service layer.
 
@@ -10,7 +10,7 @@ Location: `ai_harness/interfaces/orchestration/`
 
 ### 1.1 `Orchestrator`
 
-**File:** `ai_harness/interfaces/orchestration/orchestrator.py`
+**File:** `src/interfaces/orchestration/orchestrator.py`
 
 Main application service. Coordinates state, context, workflow, tools, memory, and observability for task execution.
 
@@ -31,7 +31,7 @@ Main application service. Coordinates state, context, workflow, tools, memory, a
 
 ### 1.2 `WorkflowManager`
 
-**File:** `ai_harness/interfaces/orchestration/workflow_manager.py`
+**File:** `src/interfaces/orchestration/workflow_manager.py`
 
 Manage workflow lifecycle — determine steps, transitions, and completion. Phase 1 is sequential; the contract supports future planner-backed workflows.
 
@@ -70,7 +70,7 @@ Manage workflow lifecycle — determine steps, transitions, and completion. Phas
 
 ### 1.3 `StateManager`
 
-**File:** `ai_harness/interfaces/orchestration/state_manager.py`
+**File:** `src/interfaces/orchestration/state_manager.py`
 
 Persist and retrieve execution state. Backend-neutral public API.
 
@@ -86,7 +86,7 @@ Persist and retrieve execution state. Backend-neutral public API.
 
 ### 1.4 `RetryManager`
 
-**File:** `ai_harness/interfaces/orchestration/retry_manager.py`
+**File:** `src/interfaces/orchestration/retry_manager.py`
 
 Encapsulate retry logic. Prevents retry concerns from leaking into tool execution or orchestration.
 

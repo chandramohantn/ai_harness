@@ -1,6 +1,6 @@
 # AI Harness — Tool Layer Contracts
 
-Location: `ai_harness/interfaces/tools/`
+Location: `src/interfaces/tools/`
 
 **Responsibility:** Define the plugin-based tool system. Tools register via a registry, are validated and permission-checked before execution, and always return normalized `ToolResponse` objects.
 
@@ -10,7 +10,7 @@ Location: `ai_harness/interfaces/tools/`
 
 ### 1.1 `BaseTool`
 
-**File:** `ai_harness/interfaces/tools/base_tool.py`
+**File:** `src/interfaces/tools/base_tool.py`
 
 Abstract base for all tool implementations. Every tool exposes metadata, validation, and execution.
 
@@ -35,7 +35,7 @@ Abstract base for all tool implementations. Every tool exposes metadata, validat
 
 ### 1.2 `ToolRegistry`
 
-**File:** `ai_harness/interfaces/tools/tool_registry.py`
+**File:** `src/interfaces/tools/tool_registry.py`
 
 Registry-based tool discovery. Clean path to dynamic plugin loading.
 
@@ -52,7 +52,7 @@ Registry-based tool discovery. Clean path to dynamic plugin loading.
 
 ### 1.3 `ToolExecutor`
 
-**File:** `ai_harness/interfaces/tools/tool_executor.py`
+**File:** `src/interfaces/tools/tool_executor.py`
 
 Execute tools with proper error mapping and result normalization.
 
@@ -72,7 +72,7 @@ Execute tools with proper error mapping and result normalization.
 
 ### 1.4 `ToolValidator`
 
-**File:** `ai_harness/interfaces/tools/tool_validator.py`
+**File:** `src/interfaces/tools/tool_validator.py`
 
 Validate tool input/output separately from routing and execution logic.
 
@@ -85,7 +85,7 @@ Validate tool input/output separately from routing and execution logic.
 
 ### 1.5 `ToolPermissionManager`
 
-**File:** `ai_harness/interfaces/tools/tool_permission_manager.py`
+**File:** `src/interfaces/tools/tool_permission_manager.py`
 
 Gate tool execution with permission checks. Phase 1 is permissive; the boundary exists for future policy enforcement.
 
@@ -112,7 +112,7 @@ Gate tool execution with permission checks. Phase 1 is permissive; the boundary 
 
 ### 1.6 `ToolRouter`
 
-**File:** `ai_harness/interfaces/tools/tool_router.py`
+**File:** `src/interfaces/tools/tool_router.py`
 
 Route a tool request to the appropriate tool and executor. Decouples orchestration from direct tool lookup.
 

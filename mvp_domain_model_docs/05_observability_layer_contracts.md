@@ -1,6 +1,6 @@
 # AI Harness — Observability Layer Contracts
 
-Location: `ai_harness/interfaces/observability/`
+Location: `src/interfaces/observability/`
 
 **Responsibility:** Single entry point for all observability — events, metrics, traces, prompt tracking, and audit logging. All components emit through `ObservationManager`. Designed for future OpenTelemetry integration.
 
@@ -10,7 +10,7 @@ Location: `ai_harness/interfaces/observability/`
 
 ### 1.1 `ObservationManager`
 
-**File:** `ai_harness/interfaces/observability/observation_manager.py`
+**File:** `src/interfaces/observability/observation_manager.py`
 
 Single entry point for recording all observability data. All other components emit through this interface.
 
@@ -33,7 +33,7 @@ Single entry point for recording all observability data. All other components em
 
 ### 1.2 `ExecutionTracer`
 
-**File:** `ai_harness/interfaces/observability/execution_tracer.py`
+**File:** `src/interfaces/observability/execution_tracer.py`
 
 Represent task execution as trace/span-style events. Designed for future OpenTelemetry integration.
 
@@ -50,7 +50,7 @@ Represent task execution as trace/span-style events. Designed for future OpenTel
 
 ### 1.3 `PromptTracer`
 
-**File:** `ai_harness/interfaces/observability/prompt_tracer.py`
+**File:** `src/interfaces/observability/prompt_tracer.py`
 
 Track prompt/response pairs for debugging and evaluation. Contract defined now; implementation minimal in Phase 1.
 
@@ -64,7 +64,7 @@ Track prompt/response pairs for debugging and evaluation. Contract defined now; 
 
 ### 1.4 `MetricsCollector`
 
-**File:** `ai_harness/interfaces/observability/metrics_collector.py`
+**File:** `src/interfaces/observability/metrics_collector.py`
 
 Collect and expose metrics.
 
@@ -94,7 +94,7 @@ Collect and expose metrics.
 
 ### 1.5 `AuditLogger`
 
-**File:** `ai_harness/interfaces/observability/audit_logger.py`
+**File:** `src/interfaces/observability/audit_logger.py`
 
 Structured audit logging for compliance and debugging.
 

@@ -1,6 +1,6 @@
 # AI Harness — Memory Layer Contracts
 
-Location: `ai_harness/interfaces/memory/`
+Location: `src/interfaces/memory/`
 
 **Responsibility:** Provide unified memory access for the orchestration layer. Manages working memory (per-task transient), session memory (cross-task history), and a pluggable storage backend. The `ContextAssembler` combines all sources into a single `TaskContext`.
 
@@ -10,7 +10,7 @@ Location: `ai_harness/interfaces/memory/`
 
 ### 1.1 `MemoryService`
 
-**File:** `ai_harness/interfaces/memory/memory_service.py`
+**File:** `src/interfaces/memory/memory_service.py`
 
 The only orchestration-facing memory contract. Provides a unified interface over working memory, session memory, and any future backends.
 
@@ -32,7 +32,7 @@ The only orchestration-facing memory contract. Provides a unified interface over
 
 ### 1.2 `WorkingMemory`
 
-**File:** `ai_harness/interfaces/memory/working_memory.py`
+**File:** `src/interfaces/memory/working_memory.py`
 
 Transient execution data for a single task run. Cleared when the task completes.
 
@@ -49,7 +49,7 @@ Transient execution data for a single task run. Cleared when the task completes.
 
 ### 1.3 `SessionMemory`
 
-**File:** `ai_harness/interfaces/memory/session_memory.py`
+**File:** `src/interfaces/memory/session_memory.py`
 
 Short conversational/task history across a session. Persists beyond a single task.
 
@@ -65,7 +65,7 @@ Short conversational/task history across a session. Persists beyond a single tas
 
 ### 1.4 `ContextAssembler`
 
-**File:** `ai_harness/interfaces/memory/context_assembler.py`
+**File:** `src/interfaces/memory/context_assembler.py`
 
 Combine request payload, session history, working memory, and recent tool results into a unified `TaskContext`. The orchestration layer depends on this, not on individual memory stores.
 
@@ -85,7 +85,7 @@ Combine request payload, session history, working memory, and recent tool result
 
 ### 1.5 `MemoryBackend`
 
-**File:** `ai_harness/interfaces/memory/memory_backend.py`
+**File:** `src/interfaces/memory/memory_backend.py`
 
 Low-level storage abstraction. Phase 1 is in-memory; the contract supports Redis/Postgres/vector backends as future drop-in replacements.
 

@@ -1,6 +1,6 @@
 # AI Harness — Cross-cutting Platform Services
 
-Location: `ai_harness/interfaces/platform/`
+Location: `src/interfaces/platform/`
 
 **Responsibility:** Light abstractions for configuration, plugin management, dependency injection, and secret handling. These exist in the MVP to keep the system wirable and extensible from day one.
 
@@ -10,7 +10,7 @@ Location: `ai_harness/interfaces/platform/`
 
 ### 1.1 `ConfigurationManager`
 
-**File:** `ai_harness/interfaces/platform/configuration_manager.py`
+**File:** `src/interfaces/platform/configuration_manager.py`
 
 Centralized configuration access. Supports hierarchical keys, defaults, and future hot-reload.
 
@@ -28,7 +28,7 @@ Centralized configuration access. Supports hierarchical keys, defaults, and futu
 
 ### 1.2 `PluginManager`
 
-**File:** `ai_harness/interfaces/platform/plugin_manager.py`
+**File:** `src/interfaces/platform/plugin_manager.py`
 
 Discover, load, and manage plugins (tools, memory backends, observers). Supports the "plugins everywhere" design principle.
 
@@ -45,7 +45,7 @@ Discover, load, and manage plugins (tools, memory backends, observers). Supports
 
 ### 1.3 `DependencyContainer`
 
-**File:** `ai_harness/interfaces/platform/dependency_container.py`
+**File:** `src/interfaces/platform/dependency_container.py`
 
 Simple dependency injection container. Wires interfaces to implementations at bootstrap time.
 
@@ -61,7 +61,7 @@ Simple dependency injection container. Wires interfaces to implementations at bo
 
 ### 1.4 `SecretManager`
 
-**File:** `ai_harness/interfaces/platform/secret_manager.py`
+**File:** `src/interfaces/platform/secret_manager.py`
 
 Interface for retrieving secrets. Defined now; implemented when external services are introduced.
 

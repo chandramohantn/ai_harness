@@ -27,7 +27,7 @@ We should **defer** advanced planning, human approval flows, evaluation, and com
 ## Recommended package structure
 
 ```text
-ai_harness/
+src/
 ├── domain/
 │   ├── models/
 │   ├── requests/

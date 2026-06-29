@@ -1,6 +1,6 @@
 # AI Harness — Interface Layer Contracts
 
-Location: `ai_harness/interfaces/interface_layer/`
+Location: `src/interfaces/interface_layer/`
 
 **Responsibility:** Accept incoming task submissions, validate input, manage sessions, transform raw input into domain models, and delegate to the orchestrator. This is the system's entry point.
 
@@ -10,7 +10,7 @@ Location: `ai_harness/interfaces/interface_layer/`
 
 ### 1.1 `InterfaceManager`
 
-**File:** `ai_harness/interfaces/interface_layer/interface_manager.py`
+**File:** `src/interfaces/interface_layer/interface_manager.py`
 
 Top-level entry point. Accepts task submissions, delegates validation, manages sessions, transforms input, and calls the orchestrator.
 
@@ -31,7 +31,7 @@ Top-level entry point. Accepts task submissions, delegates validation, manages s
 
 ### 1.2 `RequestValidator`
 
-**File:** `ai_harness/interfaces/interface_layer/request_validator.py`
+**File:** `src/interfaces/interface_layer/request_validator.py`
 
 Validate incoming raw requests before transformation. Isolated to allow auth/policy plugins later.
 
@@ -58,7 +58,7 @@ Validate incoming raw requests before transformation. Isolated to allow auth/pol
 
 ### 1.3 `RequestTransformer`
 
-**File:** `ai_harness/interfaces/interface_layer/request_transformer.py`
+**File:** `src/interfaces/interface_layer/request_transformer.py`
 
 Transform validated raw input into domain `TaskRequest` and `TaskContext`.
 
@@ -71,7 +71,7 @@ Transform validated raw input into domain `TaskRequest` and `TaskContext`.
 
 ### 1.4 `SessionManager`
 
-**File:** `ai_harness/interfaces/interface_layer/session_manager.py`
+**File:** `src/interfaces/interface_layer/session_manager.py`
 
 Manage session lifecycle. Abstracted for future persistence backends.
 

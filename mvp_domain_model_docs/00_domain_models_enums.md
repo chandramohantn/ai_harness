@@ -1,6 +1,6 @@
 # AI Harness — Domain Models & Enums
 
-Location: `ai_harness/domain/`
+Location: `src/domain/`
 
 This is the shared foundation imported by every layer. All models are framework-agnostic, explicitly serializable, and use enums for state/status values.
 
@@ -14,11 +14,11 @@ This is the shared foundation imported by every layer. All models are framework-
 
 ## 1. Enums
 
-Location: `ai_harness/domain/enums/`
+Location: `src/domain/enums/`
 
 ### 1.1 `TaskStatus`
 
-**File:** `ai_harness/domain/enums/task_status.py`
+**File:** `src/domain/enums/task_status.py`
 
 | Value | Description |
 |-------|-------------|
@@ -33,7 +33,7 @@ Location: `ai_harness/domain/enums/`
 
 ### 1.2 `TaskPriority`
 
-**File:** `ai_harness/domain/enums/task_priority.py`
+**File:** `src/domain/enums/task_priority.py`
 
 | Value | Description |
 |-------|-------------|
@@ -44,7 +44,7 @@ Location: `ai_harness/domain/enums/`
 
 ### 1.3 `ToolStatus`
 
-**File:** `ai_harness/domain/enums/tool_status.py`
+**File:** `src/domain/enums/tool_status.py`
 
 | Value | Description |
 |-------|-------------|
@@ -56,7 +56,7 @@ Location: `ai_harness/domain/enums/`
 
 ### 1.4 `MemoryOperation`
 
-**File:** `ai_harness/domain/enums/memory_operation.py`
+**File:** `src/domain/enums/memory_operation.py`
 
 | Value | Description |
 |-------|-------------|
@@ -68,7 +68,7 @@ Location: `ai_harness/domain/enums/`
 
 ### 1.5 `MemoryStatus`
 
-**File:** `ai_harness/domain/enums/memory_status.py`
+**File:** `src/domain/enums/memory_status.py`
 
 | Value | Description |
 |-------|-------------|
@@ -79,7 +79,7 @@ Location: `ai_harness/domain/enums/`
 
 ### 1.6 `EventType`
 
-**File:** `ai_harness/domain/enums/event_type.py`
+**File:** `src/domain/enums/event_type.py`
 
 | Value | Description |
 |-------|-------------|
@@ -97,7 +97,7 @@ Location: `ai_harness/domain/enums/`
 
 ### 1.7 `EventSeverity`
 
-**File:** `ai_harness/domain/enums/event_severity.py`
+**File:** `src/domain/enums/event_severity.py`
 
 | Value | Description |
 |-------|-------------|
@@ -109,7 +109,7 @@ Location: `ai_harness/domain/enums/`
 
 ### 1.8 `MetricType`
 
-**File:** `ai_harness/domain/enums/metric_type.py`
+**File:** `src/domain/enums/metric_type.py`
 
 | Value | Description |
 |-------|-------------|
@@ -121,11 +121,11 @@ Location: `ai_harness/domain/enums/`
 
 ## 2. Domain Models
 
-Location: `ai_harness/domain/models/`
+Location: `src/domain/models/`
 
 ### 2.1 `TaskRequest`
 
-**File:** `ai_harness/domain/models/task_request.py`
+**File:** `src/domain/models/task_request.py`
 
 Represents an incoming task submission after validation and transformation.
 
@@ -151,7 +151,7 @@ Represents an incoming task submission after validation and transformation.
 
 ### 2.2 `TaskContext`
 
-**File:** `ai_harness/domain/models/task_context.py`
+**File:** `src/domain/models/task_context.py`
 
 Mutable execution context assembled for a task run. Controlled mutation via methods.
 
@@ -182,7 +182,7 @@ Mutable execution context assembled for a task run. Controlled mutation via meth
 
 ### 2.3 `TaskResult`
 
-**File:** `ai_harness/domain/models/task_result.py`
+**File:** `src/domain/models/task_result.py`
 
 Immutable structured result of a completed (or failed) task execution.
 
@@ -211,7 +211,7 @@ Immutable structured result of a completed (or failed) task execution.
 
 ### 2.4 `ExecutionState`
 
-**File:** `ai_harness/domain/models/execution_state.py`
+**File:** `src/domain/models/execution_state.py`
 
 Tracks the current state of a task through its lifecycle.
 
@@ -246,7 +246,7 @@ Tracks the current state of a task through its lifecycle.
 
 ### 2.5 `ToolRequest`
 
-**File:** `ai_harness/domain/models/tool_request.py`
+**File:** `src/domain/models/tool_request.py`
 
 Immutable request to invoke a specific tool.
 
@@ -272,7 +272,7 @@ Immutable request to invoke a specific tool.
 
 ### 2.6 `ToolResponse`
 
-**File:** `ai_harness/domain/models/tool_response.py`
+**File:** `src/domain/models/tool_response.py`
 
 Immutable normalized response from a tool execution.
 
@@ -301,7 +301,7 @@ Immutable normalized response from a tool execution.
 
 ### 2.7 `MemoryRequest`
 
-**File:** `ai_harness/domain/models/memory_request.py`
+**File:** `src/domain/models/memory_request.py`
 
 Immutable request to interact with the memory layer.
 
@@ -328,7 +328,7 @@ Immutable request to interact with the memory layer.
 
 ### 2.8 `MemoryResponse`
 
-**File:** `ai_harness/domain/models/memory_response.py`
+**File:** `src/domain/models/memory_response.py`
 
 Immutable response from a memory operation.
 
@@ -353,7 +353,7 @@ Immutable response from a memory operation.
 
 ### 2.9 `ObservationEvent`
 
-**File:** `ai_harness/domain/models/observation_event.py`
+**File:** `src/domain/models/observation_event.py`
 
 Immutable event record for observability.
 
@@ -382,7 +382,7 @@ Immutable event record for observability.
 
 ### 2.10 `MetricRecord`
 
-**File:** `ai_harness/domain/models/metric_record.py`
+**File:** `src/domain/models/metric_record.py`
 
 Immutable metric data point.
 
