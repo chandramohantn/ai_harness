@@ -68,7 +68,7 @@ flowchart LR
 
 ```mermaid
 flowchart TB
-    Bootstrap[build_default_harness()]
+    Bootstrap[build_default_harness]
     IM[DefaultInterfaceManager]
     RV[DefaultRequestValidator]
     RT[DefaultRequestTransformer]
