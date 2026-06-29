@@ -1,0 +1,10 @@
+from enum import StrEnum
+
+
+class ToolStatus(StrEnum):
+    SUCCESS = "SUCCESS"
+    FAILED = "FAILED"
+    TIMED_OUT = "TIMED_OUT"
+    VALIDATION_ERROR = "VALIDATION_ERROR"
+    PERMISSION_DENIED = "PERMISSION_DENIED"
+
